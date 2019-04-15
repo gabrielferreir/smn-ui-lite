@@ -17,7 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prod": "rm -rf dist && cross-env NODE_ENV=production babel src/smn-ui --out-dir dist --copy-files"
+    "prod": "rm -rf dist && cross-env NODE_ENV=production babel src/smn-ui --out-dir dist --copy-files",
+    "sass": "sass --watch src/smn-ui/index.scss:src/smn-ui/index.css"
   },
   "eslintConfig": {
     "extends": "react-app"

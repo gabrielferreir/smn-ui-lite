@@ -6,8 +6,28 @@ class App extends Component {
         return (
             <div className='container'>
                 <div className='ui-toolbar fixed flat elevate-on-scroll primary elevate-on-s960 size-2x blue-grey500'>
+
+                    <button className='ui-button flat icon'>
+                        <i className="material-icons">menu</i>
+                    </button>
+
                     <img src="https://avatars2.githubusercontent.com/u/25529764?s=200&v=4" className='logo'/>
                     <div className='title'>Demo</div>
+                </div>
+
+                <div className='ui-nav-drawer open'>
+                    <div className='ui-toolbar flat grey200'>
+
+                        <button className='ui-button flat icon'>
+                            <i className="material-icons">arrow_back</i>
+                        </button>
+
+                        <div className='title'>Demo</div>
+                    </div>
+
+                        <div className="ui-nav-drawer-overflow">
+                            <h1>Pazuzu 2</h1>
+                        </div>
                 </div>
 
                 <div class="ui-s960">
