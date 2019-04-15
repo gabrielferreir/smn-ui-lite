@@ -2,12 +2,18 @@ import React, {Component} from 'react';
 import './App.scss';
 
 class App extends Component {
+
+    toogle() {
+        document.querySelector('.ui-nav-drawer').classList.toggle('open');
+    }
+
     render() {
         return (
             <div className='container'>
-                <div className='ui-toolbar fixed flat elevate-on-scroll primary elevate-on-s960 size-2x blue-grey500'>
+                <div id='main-toolbar'
+                     className='ui-toolbar fixed flat elevate-on-scroll primary elevate-on-s960 size-2x blue-grey500'>
 
-                    <button className='ui-button flat icon'>
+                    <button className='ui-button flat icon' onClick={this.toogle}>
                         <i className="material-icons">menu</i>
                     </button>
 
@@ -15,19 +21,25 @@ class App extends Component {
                     <div className='title'>Demo</div>
                 </div>
 
-                <div className='ui-nav-drawer open'>
+                <div className='ui-nav-drawer'>
                     <div className='ui-toolbar flat grey200'>
 
-                        <button className='ui-button flat icon'>
+                        <button className='ui-button flat icon' onClick={this.toogle}>
                             <i className="material-icons">arrow_back</i>
                         </button>
 
                         <div className='title'>Demo</div>
                     </div>
 
-                        <div className="ui-nav-drawer-overflow">
-                            <h1>Pazuzu 2</h1>
+                    <div>
+                        <div className='ui-list'>
+                            <a className='ui-list-item'>Home</a>
+                            <a className='ui-list-item'>Home</a>
+                            <a className='ui-list-item'>Home</a>
+                            <a className='ui-list-item'>Home</a>
                         </div>
+                    </div>
+
                 </div>
 
                 <div class="ui-s960">
@@ -225,6 +237,35 @@ class App extends Component {
                                     <i className="material-icons">add</i>
                                 </button>
                             </div>
+
+                        </div>
+
+                        <div className='ui-card-title'>Inputs</div>
+
+                        <div className='ui-card-content'>
+
+                            <div className='ui-input-container'>
+                                <div className='ui-input-wrap'>
+                                    <input className='ui-control ui-empty' type='text' />
+                                    <label>Text</label>
+                                    <div className='line'></div>
+                                </div>
+                            </div>
+
+
+                            <div className='ui-input-container'>
+                                <div className='ui-input-wrap'>
+                                    <input className='ui-control ui-empty invalid' type='text' />
+                                    <label>Text </label>
+                                    <div className="ui-messages">
+                                        {/*<div className="ng-star-inserted">*/}
+                                            <div className="ui-message error"> Insira uma data</div>
+                                        {/*</div>*/}
+                                    </div>
+                                    <div className='line'></div>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
